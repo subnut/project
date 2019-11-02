@@ -1,0 +1,13 @@
+n=int(input("Enter your electricity bill in units: "))
+d=int(input("Enter the number of days by which you are late: "))
+amt=0
+if n>0:
+    n-=100
+    amt+=d*1
+if n>0:
+    n-=200
+    amt+=d*2
+if n>0:
+    amt+=d*4
+print("You shall have to pay a fine of INR",amt)
+

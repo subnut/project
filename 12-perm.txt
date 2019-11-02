@@ -1,0 +1,17 @@
+import math
+n=input("Enter the string: ")
+for a in n.split():
+	x=math.factorial(len(a))
+	while a!="":
+	    n=0
+	    i=a[0]
+	    l=list(a)
+	    a=""
+	    for j in l:
+	        if i==j:
+	            n+=1
+	        else:
+	           a+=j
+	    x/=math.factorial(n)
+ans=x*math.factorial(len(n))
+print("There are",ans,"possible permutations of the string, including the permutations of the individual words")

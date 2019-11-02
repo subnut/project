@@ -1,0 +1,5 @@
+n=input("Enter the character")
+if n.upper() in "AEIOU":
+    print(n,"is a vowel")
+else:
+    print(n,"is not a vowel")

@@ -1,0 +1,19 @@
+n=input("Enter your income in INR: ")
+if n<=15000:
+    tax=15
+    sur=7
+if n>15000 and n<=20000:
+    tax=18
+    sur =11
+if n>20000:
+    tax=20
+    sur=13
+tax=n*tax/100
+sur=n*sur/100
+amt=n-tax-sur
+print()
+print("Income: ",n)
+print("Tax: ",tax)
+print("Surcharge: ",sur)
+print("Net Income: ",amt)
+

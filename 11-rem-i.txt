@@ -1,0 +1,10 @@
+n=input("Enter the string: ")
+i=int(input("Enter the index of the letter you want removed: "))
+m=""
+if i<0:
+    i=len(n)+i
+for j in range(len(n)):
+    if j==i:
+        continue
+    m+=n[j]
+print(m)

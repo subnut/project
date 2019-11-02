@@ -1,0 +1,5 @@
+n=input("Enter the string: ")
+i=int(input("Enter the number of characters (including spaces) that are to be removed from the start of the string: "))
+i-=1
+n=n[i:]
+print(n)

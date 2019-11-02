@@ -1,0 +1,13 @@
+n=int(input("Enter the number of days by which you are late: "))
+amt=0
+if n<=5:
+    amt=n*0.4
+elif n>=6 and n<=10:
+    n-=5
+    amt+=2
+    amt+=n*0.65
+elif n>10:
+    n-=10
+    amt+=2+6.5
+    amt+=n*0.8
+print("Your fine is INR",amt)
