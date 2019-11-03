@@ -267,13 +267,13 @@ print(n)
 </h7>
 <br><pre><code class="language-python">a=input("Enter the string: ")
 b=input("Enter the substring to find: ")
-c=int(input("Enter the occurence whose index is to be found: "))
+c=int(input("Enter the number of occurence whose index is to be found: "))
 d=len(b)
 for i in range(c):
     x=a.find(b)
     a=a[x+d:]
 if x==-1:
-    print("The substring couldn't be found in the given string as many times as the occurence required")
+    print("The substring couldn't be found in the given string as many times as the required number of occurence")
 else:
     print("The required occurence starts from the index",x)
 </code></pre>
