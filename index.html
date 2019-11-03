@@ -9,7 +9,29 @@ alert("If you are viewing this site in a smartphone, you are advised to rotate i
 <h3>Disclaimer:I have NOT checked the programs. You are advised to check them once if you can. In case you find any code malfunctioning, please report it to me immediately. Thanks.</h3>
 <br>
 <br><h7>Qno.1WAP to Check given character is vowel or not</h7>
-<br><iframe src="1-vowel.txt" width="500"></iframe>
+<br>
+<pre><code class="language-python">
+import math
+print('''Choose your geometrical figure:
+        1. Circle
+        2. Square
+        3. Rectangle''')
+n=input("Choose your option: ")
+while n not in "123":
+    print("Please enter a valid option")
+    n=input("Choose your option: ")
+if n==1:
+    a=float(input("Enter the radius: "))
+    res=math.pi()*(a**2)
+elif n==2:
+    a=float(input("Enter the length of each side: "))
+    res=a**2
+elif n==3:
+    l=float(input("Enter the length: "))
+    b=float(input("Enter the breadth: "))
+    res=l*b
+print("The area is",res)
+</code></pre>
 <br>
 <br><h7>Qno.1 Write a menu driven program to calculate:
 Area of circle[A=πr2]
