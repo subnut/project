@@ -1,0 +1,284 @@
+<html>
+<head>
+<title>CS Practicals</title>
+<script type="text/javascript">
+alert("If you are viewing this site in a smartphone, you are advised to rotate it into landscape mode")
+</script>
+<link rel="stylesheet" href="prism.css"/>
+</head>
+<body>
+<h3>Disclaimer:I have NOT checked the programs. You are advised to check them once if you can. In case you find any code malfunctioning, please report it to me immediately. Thanks.</h3>
+<br>
+<br><h7>Qno.1WAP to Check given character is vowel or not</h7>
+<br>
+<pre><code class="language-python">n=input("Enter the character")
+if n.upper() in "AEIOU":
+    print(n,"is a vowel")
+else:
+    print(n,"is not a vowel")
+
+</code></pre>
+<br>
+<br><h7>Qno.1 Write a menu driven program to calculate:
+Area of circle[A=πr2]
+Area of square [A=a*a]
+Area of rectangle[A=l*b]
+</h7>
+<br><pre><code class="language-python">import math
+print('''Choose your geometrical figure:
+        1. Circle
+        2. Square
+        3. Rectangle''')
+n=input("Choose your option: ")
+while n not in "123":
+    print("Please enter a valid option")
+    n=input("Choose your option: ")
+if n==1:
+    a=float(input("Enter the radius: "))
+    res=math.pi()*(a**2)
+elif n==2:
+    a=float(input("Enter the length of each side: "))
+    res=a**2
+elif n==3:
+    l=float(input("Enter the length: "))
+    b=float(input("Enter the breadth: "))
+    res=l*b
+print("The area is",res)
+</code></pre>
+<br>
+<br><h7>QNo.2WAP to Assign a stream to student according:
+Marks obtained in diff. subject Stream
+Eng., Maths and Science >=80% Pure Science
+Eng., and Science >=80%, Maths>=60% Bio. Science
+Eng., Maths and Science >=60% Commerce
+</h7>
+<br><pre><code class="language-python">print("Enter your marks obtained in the following subjects -")
+m=float(input("Maths: "))
+s=float(input("Science: "))
+e=float(input("English: "))
+z=int(input("Enter the maximum marks: "))
+m=m/x*100
+s=s/x*100
+e=e/x*100
+if e>=80 and m>=80 and s>=80:
+    print("Pure science")
+elif e>=80 and m>=60 and s>=80:
+    print("Bio. Science")
+elif e>=60 and m>=60 and s>=60:
+    print("Commerce")
+</code></pre>
+<br>
+<br><h7>Qno.3WAP to print the Discount in Rupees for a salesman. The
+Discount is based on the following conditions
+Sales Dis %< Rs. 5000 5%
+Rs. 5000 to Rs. 10000 8%
+Above Rs. 10000 10%
+[Dis=Sales*<Dis_percentage >)/100] ,[TotalAmount=Sales-Dis]
+</h7>
+<br><pre><code class="language-python">amt=float(input("Enter your amount of sales in INR: "))
+if amt<5000:
+    dis=5
+elif amt>=5000 and amt<=10000:
+    dis=10
+elif amt>10000:
+    dis=15
+dis=amt*dis/100
+print("You shall get a discount of INR",dis)
+</code></pre>
+<br>
+<br><h7>Qno.4.WAP to print the Income, Tax & Surcharge of Employ.The Tax and Surcharge based on the following conditions
+Income Tax % Surcharge< Rs. 15000 15% 7%
+Rs. 15001 to Rs. 20000 18% 11%
+Above Rs. 21000 20% 13%
+[Total Income =Income- Tax-Surcharge][Tax=Income<Tax_percentage >)/100]
+display all information likeIncome, Tax & Surcharge .
+</h7>
+<br><pre><code class="language-python">n=input("Enter your income in INR: ")
+if n<=15000:
+    tax=15
+    sur=7
+if n>15000 and n<=20000:
+    tax=18
+    sur =11
+if n>20000:
+    tax=20
+    sur=13
+tax=n*tax/100
+sur=n*sur/100
+amt=n-tax-sur
+print()
+print("Income: ",n)
+print("Tax: ",tax)
+print("Surcharge: ",sur)
+print("Net Income: ",amt)
+</code></pre>
+<br>
+<br><h7>Q.5.WAP to print the Division :
+Per Division< 40 Failed
+40 to 50 Third
+50 to 60 Second
+>=60 First
+</h7>
+<br><pre><code class="language-python">n=float(input("Enter your marks: "))
+if n<40:
+    print("Failed")
+elif n>=40 and n<50:
+    print("Third division")
+elif n>=50 and n<60:
+    print("Second division")
+elif n>=60:
+    print("First division")
+</code></pre>
+<br>
+<br><h7>Q6.WAP to get input distance and print fare for the passenger according to:
+DISTANCE FARE (in Rs.)
+Upto 20km 10 P/K
+Next 20km 7 P/K
+Above 6 P/K
+</h7>
+<br><pre><code class="language-python">n=int(input("Enter your distance in km: "))
+amt=0
+if n<=20:
+    amt=n*0.1
+elif n>20 and n<=40:
+    n-=20
+    amt+=2
+    amt+=n*0.07
+elif n>40:
+    n-=40
+    amt+=2+1.4
+    amt+=n*0.06
+print("Your fare is INR",amt)
+</code></pre>
+<br>
+<br><h7>Q.7.WAP to for library charges a fine for books returned late. Following are the fines :
+First five days : 40 paisa per day.
+Six to ten day : 65 paisa per day.
+Above ten days : 80 paisa per day
+</h7>
+<br><pre><code class="language-python">n=int(input("Enter the number of days by which you are late: "))
+amt=0
+if n<=5:
+    amt=n*0.4
+elif n>=6 and n<=10:
+    n-=5
+    amt+=2
+    amt+=n*0.65
+elif n>10:
+    n-=10
+    amt+=2+6.5
+    amt+=n*0.8
+print("Your fine is INR",amt)
+</code></pre>
+<br>
+<br><h7>Q.8.WAP to for Electric Bill charges according to charges.
+Following are the fines :
+First 100 Units : 1 Rs per day.
+Next200 Units : 2 Rs per day.
+Above300 Units : 4 Rs per day.
+</h7>
+<br><pre><code class="language-python">n=int(input("Enter your electricity bill in units: "))
+d=int(input("Enter the number of days by which you are late: "))
+amt=0
+if n>0:
+    n-=100
+    amt+=d*1
+if n>0:
+    n-=200
+    amt+=d*2
+if n>0:
+    amt+=d*4
+print("You shall have to pay a fine of INR",amt)
+</code></pre>
+<br>
+<br><h7>Q9. WAP to Reverse words in a given String in Python
+</h7>
+<br><pre><code class="language-python">n=input("Enter the string: ")
+n=n.lower()
+m=""
+for i in n.split():
+    i=i[::-1]
+    m+=i
+print(m)
+</code></pre>
+<br>
+<br><h7>Q.10  WAP to check if given string contains only letter
+</h7>
+<br><pre><code class="language-python">n=input("Enter the string: ")
+if n.isalpha():
+    print("The string contains only letters")
+else:
+    print("The string doesn't contain letters only")
+</code></pre>
+<br>
+<br><h7>Q.11 WAP to remove i'th(index) character from string in Python
+</h7>
+<br><pre><code class="language-python">n=input("Enter the string: ")
+i=int(input("Enter the index of the letter you want removed: "))
+m=""
+if i<0:
+    i=len(n)+i
+for j in range(len(n)):
+    if j==i:
+        continue
+    m+=n[j]
+print(m)
+</code></pre>
+<br>
+<br><h7>Q12. WAP to find all permutation of a string
+</h7>
+<br><pre><code class="language-python">import math
+n=input("Enter the string: ")
+for a in n.split():
+	x=math.factorial(len(a))
+	while a!="":
+	    n=0
+	    i=a[0]
+	    l=list(a)
+	    a=""
+	    for j in l:
+	        if i==j:
+	            n+=1
+	        else:
+	           a+=j
+	    x/=math.factorial(n)
+ans=x*math.factorial(len(n))
+print("There are",ans,"possible permutations of the string, including the permutations of the individual words")
+</code></pre>
+<br>
+<br><h7>Q.13WAP to remove n characters from start of given string
+</h7>
+<br><pre><code class="language-python">n=input("Enter the string: ")
+i=int(input("Enter the number of characters (including spaces) that are to be removed from the start of the string: "))
+i-=1
+n=n[i:]
+print(n)
+</code></pre>
+<br>
+<br><h7>Q.14 WAP to find nth occurrence of substring in a string
+</h7>
+<br><pre><code class="language-python">a=input("Enter the string: ")
+b=input("Enter the substring to find: ")
+c=int(input("Enter the occurence whose index is to be found: "))
+d=len(b)
+for i in range(c):
+    x=a.find(b)
+    a=a[x+d:]
+if x==-1:
+    print("The substring couldn't be found in the given string as many times as the occurence required")
+else:
+    print("The required occurence starts from the index",x)
+</code></pre>
+<br>
+<br><h7>Q.15 WAP to check whether a string is palindrome or not
+</h7>
+<br><pre><code class="language-python">n=input("Enter the string: ")
+n=n.lower()
+if n==n[::-1]:
+    print("It is a palindrome")
+else:
+    print("It is not a palindrome")
+</code></pre>
+<script src="prism.js"></script>
+</body>
+</html>
