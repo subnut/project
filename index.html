@@ -1,18 +1,14 @@
 <html>
 <head>
 <title>CS Practicals</title>
-<!--
 <script type="text/javascript">
 alert("If you are viewing this site in a smartphone, you are advised to rotate it into landscape mode")
 </script>
---> 
 <link rel="stylesheet" href="prism.css"/>
 </head>
-<body bgcolor="#F5F2F0">
-<h3>Disclaimer: I have NOT checked the programs. You are advised to check them once if you can. In case you find any code malfunctioning, please report it to me immediately. Thanks.</h3>
+<body>
+<h3>Disclaimer:I have NOT checked the programs. You are advised to check them once if you can. In case you find any code malfunctioning, please report it to me immediately. Thanks.</h3>
 <br>
-<br>The original list of questions (as given by Veena Ma'am in Official Group) can be found: <a href="https://drive.google.com/file/d/17wjB5dwPbRl-XeKetuJ_LMRoqTnSVNRo/view?usp=sharing">HERE</a>
-<br><br><br><br>
 <br><h7>Qno.1WAP to Check given character is vowel or not</h7>
 <br>
 <pre><code class="language-python">n=input("Enter the character")
@@ -20,11 +16,10 @@ if n.upper() in "AEIOU":
     print(n,"is a vowel")
 else:
     print(n,"is not a vowel")
-
 </code></pre>
 <br>
 <br><h7>Qno.1 Write a menu driven program to calculate:
-Area of circle[A=πr2]
+Area of circle[A=蟺r2]
 Area of square [A=a*a]
 Area of rectangle[A=l*b]
 </h7>
@@ -37,13 +32,13 @@ n=input("Choose your option: ")
 while n not in "123":
     print("Please enter a valid option")
     n=input("Choose your option: ")
-if n==1:
+if n=="1":
     a=float(input("Enter the radius: "))
     res=math.pi()*(a**2)
-elif n==2:
+elif n=="2":
     a=float(input("Enter the length of each side: "))
     res=a**2
-elif n==3:
+elif n=="3":
     l=float(input("Enter the length: "))
     b=float(input("Enter the breadth: "))
     res=l*b
@@ -184,18 +179,14 @@ Above300 Units : 4 Rs per day.
 <br><pre><code class="language-python">n=int(input("Enter your electricity bill in units: "))
 d=int(input("Enter the number of days by which you are late: "))
 amt=0
-if n<=100:
+if n>0:
+    n-=100
     amt+=d*1
-if n>100 and n<=300:
-    amt+=100*d
-    n-=100
-    amt+=d*2
-if n>300:
-    amt+=100*d
-    n-=100
-    amt+=d*2
+if n>0:
     n-=200
-    amt+=d*4    
+    amt+=d*2
+if n>0:
+    amt+=d*4
 print("You shall have to pay a fine of INR",amt)
 </code></pre>
 <br>
@@ -266,13 +257,13 @@ print(n)
 </h7>
 <br><pre><code class="language-python">a=input("Enter the string: ")
 b=input("Enter the substring to find: ")
-c=int(input("Enter the number of occurence whose index is to be found: "))
+c=int(input("Enter the occurence whose index is to be found: "))
 d=len(b)
 for i in range(c):
     x=a.find(b)
     a=a[x+d:]
 if x==-1:
-    print("The substring didn't occur in the given string as many times as the required number of occurence")
+    print("The substring couldn't be found in the given string as many times as the occurence required")
 else:
     print("The required occurence starts from the index",x)
 </code></pre>
