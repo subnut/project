@@ -250,13 +250,17 @@ print(n)
 <br>
 <br><h7>Q.14 WAP to find nth occurrence of substring in a string
 </h7>
-<br><pre><code class="language-python">ini_str = "abababababab"
-sub_str = "ab"
-occurence = 4
-val = -1
-for i in range(0, occurence): 
-    val = ini_str.find(sub_str, val + 1) 
-print ("Nth occurrence is at", val)
+<br><pre><code class="language-python">a=input("Enter the string: ")
+b=input("Enter the substring to find: ")
+c=int(input("Enter the number of occurence whose index is to be found: "))
+d=len(b)
+for i in range(c):
+    x=a.find(b)
+    a=a[x+d:]
+if x==-1:
+    print("The substring didn't occur in the given string as many times as the required number of occurence")
+else:
+    print("The required occurence starts from the index",x)
 </code></pre>
 <br>
 <br><h7>Q.15 WAP to check whether a string is palindrome or not
