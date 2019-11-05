@@ -59,7 +59,7 @@ Eng., Maths and Science >=60% Commerce
 m=float(input("Maths: "))
 s=float(input("Science: "))
 e=float(input("English: "))
-z=int(input("Enter the maximum marks: "))
+x=int(input("Enter the maximum marks: "))
 m=m/x*100
 s=s/x*100
 e=e/x*100
@@ -236,21 +236,8 @@ print(m)
 </h7>
 <br><pre><code class="language-python">import math
 n=input("Enter the string: ")
-for a in n.split():
-	x=math.factorial(len(a))
-	while a!="":
-	    n=0
-	    i=a[0]
-	    l=list(a)
-	    a=""
-	    for j in l:
-	        if i==j:
-	            n+=1
-	        else:
-	           a+=j
-	    x/=math.factorial(n)
-ans=x*math.factorial(len(n))
-print("There are",ans,"possible permutations of the string, including the permutations of the individual words")
+ans=math.factorial(len(n))
+print("There are",ans,"possible permutations of the string")
 </code></pre>
 <br>
 <br><h7>Q.13WAP to remove n characters from start of given string
