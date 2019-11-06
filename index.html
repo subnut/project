@@ -82,9 +82,9 @@ Above Rs. 10000 10%
 if amt<5000:
     dis=5
 elif amt>=5000 and amt<=10000:
-    dis=10
+    dis=8
 elif amt>10000:
-    dis=15
+    dis=10
 dis=amt*dis/100
 print("You shall get a discount of INR",dis)
 </code></pre>
@@ -169,7 +169,7 @@ elif n>=6 and n<=10:
     amt+=n*0.65
 elif n>10:
     n-=10
-    amt+=2+6.5
+    amt+=2+3.25
     amt+=n*0.8
 print("Your fine is INR",amt)
 </code></pre>
@@ -183,17 +183,13 @@ Above300 Units : 4 Rs per day.
 <br><pre><code class="language-python">n=int(input("Enter your electricity bill in units: "))
 d=int(input("Enter the number of days by which you are late: "))
 amt=0
-if n<=100:
+if n>0:
     amt+=d*1
-if n>100 and n<=300:
-    amt+=100*d
     n-=100
-    amt+=d*2
-if n>300:
-    amt+=100*d
-    n-=100
+if n>0:
     amt+=d*2
     n-=200
+if n>0:
     amt+=d*4    
 print("You shall have to pay a fine of INR",amt)
 </code></pre>
@@ -205,7 +201,7 @@ n=n.lower()
 m=""
 for i in n.split():
     i=i[::-1]
-    m+=i
+    m+=i+" "
 print(m)
 </code></pre>
 <br>
@@ -215,13 +211,13 @@ print(m)
 if n.isalpha():
     print("The string contains only letters")
 else:
-    print("The string doesn't contain letters only")
+    print("The string doesn't contain only letters")
 </code></pre>
 <br>
 <br><h7>Q.11 WAP to remove i'th(index) character from string in Python
 </h7>
 <br><pre><code class="language-python">n=input("Enter the string: ")
-i=int(input("Enter the index of the letter you want removed: "))
+i=int(input("Enter the index of the character you want removed: "))
 m=""
 if i<0:
     i=len(n)+i
@@ -236,7 +232,7 @@ print(m)
 </h7>
 <br><pre><code class="language-python">import math
 n=input("Enter the string: ")
-ans=math.factorial(len(n))
+ans=math.factorial(len(n.split()))
 print("There are",ans,"possible permutations of the string")
 </code></pre>
 <br>
