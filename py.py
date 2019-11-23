@@ -2,6 +2,16 @@ x=open('uin','a')
 x.close()
 del x
 
+def modify(empid):
+
+
+def deldet(empid):
+
+
+def delemp(empid):
+
+
+
 def empadd(addid):
     elist=open("uin","a")
     elist.write(addid+"\n")
@@ -49,7 +59,18 @@ def empfound(empid):
 1. Modify details
 2. Delete details
 3. Delete employee''')
-        opt=input("Choose your option: ")
+        while 0<1:
+            opt=input("Choose your option: ")
+            if opt in "123":
+                if opt=='1':
+                    modify(empid)
+                if opt=='2':
+                    deldet(empid)
+                if opt=='3':
+                    delemp(empid)
+                break    
+            else:
+                print("Invalid input. Please try again.")
         
         
 
@@ -85,7 +106,4 @@ while enquiry:
             enquiry=False
             break
         else:
-            print("Invalid input. Please try again.")
-            
-
-                
+print("Invalid input. Please try again.")
