@@ -1,5 +1,0 @@
-n=input("Enter the string: ")
-if n.isalpha():
-    print("The string contains only letters")
-else:
-    print("The string doesn't contain letters only")
