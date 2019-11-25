@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>CS Practicals</title>
+<title>CS Project</title>
 <!--
 <script type="text/javascript">
 alert("If you are viewing this site in a smartphone, you are advised to rotate it into landscape mode")
@@ -28,6 +28,28 @@ x=open('uin','a')
 x.close()
 del x
 
+
+def adddet(empid):
+    det=open(empid,'a')
+    add=True
+    while add:
+        a=input("Property: ")
+        b=input("Value: ")
+        c=a+': '+b
+        det.write(c+'\n')
+        while 0<1:
+            eq=input("Do you want to add more? [y/n] ")
+            eq=eq.lower()
+            if eq=='y':
+                add=True
+                break
+            elif eq=='n':
+                add=False
+                break
+            else:
+                print("Invalid input. Please try again.")
+    det.close()
+
 def modify(empid):
     el=open(empid,'r')
     data=el.readlines()
@@ -51,12 +73,7 @@ def modify(empid):
     el=open(empid,'w+')
     el.writelines(data)
     el.close()
-    del el
-    del i
-    del x
-    del ln
-    del dt
-    del data
+
 
 def deldet(empid):
     el=open(empid,'r')
@@ -77,10 +94,7 @@ def deldet(empid):
     el=open(empid,'w+')
     el.writelines(data)
     el.close()
-    del el
-    del i
-    del x
-    del data
+
     
 
 def delemp(empid):
@@ -119,13 +133,14 @@ def delemp(empid):
                 break
             else:
                 print("Invalid input. Please try again")
-    del dl
+
 
 
 
 def empadd(addid):
     elist=open("uin","a")
     elist.write(addid+"\n")
+    elist.close()
     fileadd=open(addid,'a')
     add=True
     while add:
@@ -133,9 +148,9 @@ def empadd(addid):
         b=input("Value: ")
         c=a+': '+b
         fileadd.write(c+'\n')
-        eq=input("Do you want to add more? [y/n] ")
-        eq=eq.lower()
         while 0<1:
+            eq=input("Do you want to add more? [y/n] ")
+            eq=eq.lower()
             if eq=='y':
                 add=True
                 break
@@ -145,13 +160,15 @@ def empadd(addid):
             else:
                 print("Invalid input. Please try again.")
     fileadd.close()
-    del fileadd
 
 
 def empfound(empid):
     empdet=open(empid,'r')
-    for i in empdet.readlines():
+    y=empdet.readlines()
+    for i in y:
         print(i[:-1])
+    if len(y)==0:
+        print("The employee has been found, but has no saved details")
     empdet.close()
     del empdet
     mod=False
@@ -167,23 +184,30 @@ def empfound(empid):
             print("Invalid input. Please try again.")
     if mod:
         print('''What do you want to do?
-1. Modify details
-2. Delete details
-3. Delete employee''')
+1. Add details
+2. Modify details
+3. Delete details
+4. Delete employee
+5. Do not modify anything ''')
         while 0<1:
             opt=input("Choose your option: ")
-            if opt in "123":
+            if opt in "12345":
                 if opt=='1':
-                    modify(empid)
+                    adddet(empid)
                 if opt=='2':
-                    deldet(empid)
+                    if len(y)==0:
+                        print("No details available to modify. Try adding some details first (option 1).")
+                        continue
+                    else:
+                        modify(empid)
                 if opt=='3':
+                    deldet(empid)
+                if opt=='4':
                     delemp(empid)
                 break    
             else:
                 print("Invalid input. Please try again.")
-        
-        
+
 
 enquiry=True
 while enquiry:
@@ -218,6 +242,7 @@ while enquiry:
             break
         else:
             print("Invalid input. Please try again.")
+
 </code></pre>
 <script src="prism.js"></script>
 </body>
