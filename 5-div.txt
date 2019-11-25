@@ -1,9 +1,0 @@
-n=float(input("Enter your marks: "))
-if n<40:
-    print("Failed")
-elif n>=40 and n<50:
-    print("Third division")
-elif n>=50 and n<60:
-    print("Second division")
-elif n>=60:
-    print("First division")
