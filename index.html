@@ -138,8 +138,26 @@ def empadd(addid):
     elist=open("uin","a")
     elist.write(addid+"\n")
     elist.close()
-    fileadd=open(addid,'a')
     add=True
+    try:
+        v=open(addid,'r')
+        v.close()
+        del v
+    except:
+        None
+    else:
+        print("Previously saved details of the employee has been found")
+        while 0<1:
+            inp=input("Do you want to use them? [y/n] ")
+            inp=inp.lower()
+            if inp=='y':
+                add=False
+                break
+            elif inp=='n':
+                break
+            else:
+                print("Invalid input. Please try again")
+    fileadd=open(addid,'a')
     while add:
         a=input("Property: ")
         b=input("Value: ")
