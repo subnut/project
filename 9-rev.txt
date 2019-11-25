@@ -1,7 +1,0 @@
-n=input("Enter the string: ")
-n=n.lower()
-m=""
-for i in n.split():
-    i=i[::-1]
-    m+=i
-print(m)
