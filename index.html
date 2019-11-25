@@ -264,6 +264,32 @@ while enquiry:
 
 ################## End of program ########################
 </code></pre>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<pre><code class="language-python">def palin(string):
+    if type(string)!=type(""):
+        print("Not a string!")
+    else:
+        string=string.lower()
+        if string==string[::-1]:
+            return True
+        else:
+            return False
+
+a=""
+n=input("Enter the string: ")
+l=len(n)
+for i in range(l):
+    for j in range(i,l):
+        x=n[i:j+1]
+        if palin(x)==True:
+            if len(x)>len(a):
+                a=x
+
+if len(a)<=1:
+    print("No palindrome found")
+else:
+    print("The found palindrome is",a)
+</code></pre>
 <script src="prism.js"></script>
 </body>
 </html>
