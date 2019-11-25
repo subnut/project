@@ -28,7 +28,6 @@ x=open('uin','a')
 x.close()
 del x
 
-
 def adddet(empid):
     det=open(empid,'a')
     add=True
@@ -49,6 +48,7 @@ def adddet(empid):
             else:
                 print("Invalid input. Please try again.")
     det.close()
+
 
 def modify(empid):
     el=open(empid,'r')
@@ -94,8 +94,7 @@ def deldet(empid):
     el=open(empid,'w+')
     el.writelines(data)
     el.close()
-
-    
+ 
 
 def delemp(empid):
     while 0<1:
@@ -133,8 +132,6 @@ def delemp(empid):
                 break
             else:
                 print("Invalid input. Please try again")
-
-
 
 
 def empadd(addid):
@@ -209,6 +206,10 @@ def empfound(empid):
                 print("Invalid input. Please try again.")
 
 
+####################################################################
+################ Main part begins here #############################
+####################################################################
+
 enquiry=True
 while enquiry:
     uid=input("Enter Employee UIN: ")
@@ -243,6 +244,7 @@ while enquiry:
         else:
             print("Invalid input. Please try again.")
 
+################## End of program ########################
 </code></pre>
 <script src="prism.js"></script>
 </body>
