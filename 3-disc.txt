@@ -1,9 +1,0 @@
-amt=float(input("Enter your amount of sales in INR: "))
-if amt<5000:
-    dis=5
-elif amt>=5000 and amt<=10000:
-    dis=10
-elif amt>10000:
-    dis=15
-dis=amt*dis/100
-print("You shall get a discount of INR",dis)
